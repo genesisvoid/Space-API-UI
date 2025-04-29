@@ -1,14 +1,22 @@
-/* 🚀 Space-Themed UI Styling */
+/* 🚀 Space-Themed UI Styling with Animations */
 
 /* 🔹 General Page Styling */
 body {
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    background: url('https://source.unsplash.com/1600x900/?space,stars,galaxy') no-repeat center center fixed;
-    background-size: cover;
+    background: linear-gradient(to right, #010024, #020027, #03002f); /* Deep space gradient */
+    background-attachment: fixed;
+    overflow-x: hidden;
     color: white;
     margin: 0;
     padding: 0;
+    animation: spaceFlow 10s infinite alternate; /* Background movement */
+}
+
+/* 🔹 Background Animation */
+@keyframes spaceFlow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
 /* 🔹 Hero Section */
@@ -20,14 +28,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 2s ease-in-out;
 }
 .overlay {
     background: rgba(0, 0, 0, 0.6);
     padding: 50px;
     border-radius: 15px;
+    animation: float 5s infinite alternate;
 }
 .hero h1 {
     font-size: 3em;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue;
     animation: glow 2s infinite alternate;
 }
 .hero button {
@@ -38,15 +49,18 @@ body {
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    animation: pulse 2s infinite alternate;
 }
 .hero button:hover {
     background: blue;
+    transform: scale(1.05);
 }
 
 /* 🔹 Explore Section */
 .explore {
     padding: 40px;
     background: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease-in-out;
 }
 .planet-grid {
     display: flex;
@@ -60,10 +74,11 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .planet-card:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px cyan;
 }
 
 /* 🔹 Journal Section */
@@ -73,14 +88,27 @@ body {
     margin: 10px;
     border-radius: 8px;
     border: 2px solid white;
+    animation: fadeIn 1s ease-in-out;
 }
 .journal input:focus, .journal button:hover {
     background: rgba(255, 255, 255, 0.2);
     color: white;
 }
 
-/* 🔹 Glowing Animation */
+/* 🔹 Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+}
 @keyframes glow {
     0% { text-shadow: 0 0 10px white; }
     100% { text-shadow: 0 0 20px cyan, 0 0 30px blue; }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
 }
