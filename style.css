@@ -1,21 +1,17 @@
-/* 🚀 Elegant Space-Themed UI with Embedded Typography */
+/* 🚀 Elegant Space-Themed UI with Interactive Background */
 
 /* 🔹 General Page Styling */
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: linear-gradient(to right, #0c0c21, #1a1a3c); /* Deep space gradient */
-    background-attachment: fixed;
-    color: white;
     margin: 0;
-    padding: 0;
+    overflow: hidden; /* Prevents scrollbars */
+    background-color: black; /* Space aesthetic */
 }
 
 /* 🔹 Hero Section */
 .hero {
     height: 90vh;
-    background: url('https://source.unsplash.com/1600x900/?galaxy,stars,nebula') no-repeat center center fixed;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +37,6 @@ body {
 /* 🔹 Explore Section */
 .explore {
     padding: 60px;
-    background: transparent; /* Removed any box lining */
 }
 .planet-grid {
     display: flex;
@@ -52,8 +47,6 @@ body {
 .planet-card {
     width: 300px;
     padding: 20px;
-    background: transparent; /* No box outline */
-    border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -72,27 +65,5 @@ body {
     font-family: 'Roboto', sans-serif;
     opacity: 0.9;
     margin-top: 10px;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-}
-
-/* 🔹 Cosmic Journal */
-.journal {
-    padding: 50px;
-}
-.journal input, .journal button {
-    padding: 12px;
-    font-size: 18px;
-    margin: 12px;
-    border-radius: 8px;
-    border: 2px solid white;
-}
-.journal input:focus, .journal button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-}
-.journal .subtext {
-    font-size: 1.3em;
-    font-family: 'Roboto', sans-serif;
-    opacity: 0.85;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }

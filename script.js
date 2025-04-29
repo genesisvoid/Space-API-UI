@@ -1,38 +1,46 @@
-// 🚀 Space API Explorer - JavaScript
+// 🚀 Fully Interactive 3D Space Background with Three.js
 
-// Scroll to Explore Section
-function scrollToExplore() {
-    document.getElementById('explore').scrollIntoView({ behavior: 'smooth' });
+// Create a scene
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// Add a starfield
+const starGeometry = new THREE.BufferGeometry();
+const starVertices = [];
+for (let i = 0; i < 1000; i++) {
+    const x = (Math.random() - 0.5) * 2000;
+    const y = (Math.random() - 0.5) * 2000;
+    const z = (Math.random() - 0.5) * 2000;
+    starVertices.push(x, y, z);
+}
+starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+
+const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 1 });
+const starField = new THREE.Points(starGeometry, starMaterial);
+scene.add(starField);
+
+// Camera position
+camera.position.z = 500;
+
+// Animation function
+function animate() {
+    requestAnimationFrame(animate);
+
+    // Rotate starfield for motion effect
+    starField.rotation.x += 0.0005;
+    starField.rotation.y += 0.0005;
+
+    renderer.render(scene, camera);
 }
 
-// Fetch Space Data from NASA API
-async function fetchData(query = null) {
-    document.getElementById('result').innerHTML = "<p style='color:cyan;'>🚀 Searching for space data...</p>";
+animate();
 
-    const apiKey = "vFfRYVJJTPDKd5vi5xEru2vvndoZ90zej17bI6jx";
-    const userQuery = query || document.getElementById('searchQuery').value.toLowerCase().trim();
-    let url;
-
-    if (userQuery.includes("mars")) {
-        url = `https://images-api.nasa.gov/search?q=mars`;
-    } else if (userQuery.includes("jupiter")) {
-        url = `https://images-api.nasa.gov/search?q=jupiter`;
-    } else if (userQuery.includes("andromeda")) {
-        url = `https://images-api.nasa.gov/search?q=andromeda`;
-    } else {
-        url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
-    }
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        document.getElementById('result').innerHTML = `
-            <h2>${data.collection.items[0].data[0].title}</h2>
-            <img src="${data.collection.items[0].links[0].href}" alt="NASA Image">
-            <p>${data.collection.items[0].data[0].description}</p>
-        `;
-    } catch (error) {
-        document.getElementById('result').innerHTML = "<p>Error fetching space data. Please try again!</p>";
-    }
-}
+// Handle window resize
+window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+});
