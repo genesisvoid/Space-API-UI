@@ -7,12 +7,24 @@ body {
     background: url('https://source.unsplash.com/1600x900/?space,stars,galaxy') no-repeat center center fixed;
     background-size: cover;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 /* 🔹 Hero Section */
 .hero {
-    padding: 80px;
-    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?nebula') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    border-radius: 15px;
 }
 .hero h1 {
     font-size: 3em;
@@ -40,10 +52,11 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .planet-card {
-    width: 200px;
-    padding: 10px;
+    width: 250px;
+    padding: 15px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
