@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmic Explorer</title>
     <!-- 🚀 Space Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <!-- 🌌 External Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +15,7 @@
     <header class="hero">
         <div class="overlay">
             <h1>Journey Through the Cosmos</h1>
-            <p>Explore planets, galaxies, and space phenomena in real time.</p>
+            <p class="subtext">Explore planets, galaxies, and space phenomena in real time.</p>
             <button onclick="scrollToExplore()">Start Exploring</button>
         </div>
     </header>
@@ -27,14 +27,17 @@
             <div class="planet-card" onclick="fetchData('mars')">
                 <h3>Mars</h3>
                 <img src="https://source.unsplash.com/400x300/?mars" alt="Mars">
+                <p class="description">A red world of mystery and potential future exploration.</p>
             </div>
             <div class="planet-card" onclick="fetchData('jupiter')">
                 <h3>Jupiter</h3>
                 <img src="https://source.unsplash.com/400x300/?jupiter" alt="Jupiter">
+                <p class="description">A gas giant with powerful storms and mesmerizing rings.</p>
             </div>
             <div class="planet-card" onclick="fetchData('andromeda')">
                 <h3>Andromeda Galaxy</h3>
                 <img src="https://source.unsplash.com/400x300/?galaxy" alt="Andromeda">
+                <p class="description">Our nearest galactic neighbor, full of cosmic secrets.</p>
             </div>
         </div>
     </section>
@@ -42,9 +45,10 @@
     <!-- 🔹 Journal Section -->
     <section class="journal">
         <h2>Cosmic Insights</h2>
-        <p id="result">Search for space data using NASA’s API</p>
-        <input type="text" id="searchQuery" placeholder="Enter a space object">
+        <p class="subtext">Search for space data using NASA’s API</p>
+        <input type="text" id="searchQuery" placeholder="Enter a celestial body">
         <button onclick="fetchData()">Search</button>
+        <div id="result"></div>
     </section>
 
     <!-- 🚀 External JavaScript -->

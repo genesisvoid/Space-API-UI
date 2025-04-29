@@ -1,4 +1,4 @@
-/* 🚀 Space-Themed UI Styling with Animations */
+/* 🚀 Space-Themed UI with Perfected Text Formatting & Design */
 
 /* 🔹 General Page Styling */
 body {
@@ -10,39 +10,39 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    animation: spaceFlow 10s infinite alternate; /* Background movement */
-}
-
-/* 🔹 Background Animation */
-@keyframes spaceFlow {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
 }
 
 /* 🔹 Hero Section */
 .hero {
     position: relative;
     height: 100vh;
-    background: url('https://source.unsplash.com/1600x900/?nebula') no-repeat center center fixed;
+    background: url('https://source.unsplash.com/1600x900/?nebula,galaxy') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 2s ease-in-out;
 }
 .overlay {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     padding: 50px;
     border-radius: 15px;
     animation: float 5s infinite alternate;
 }
 .hero h1 {
-    font-size: 3em;
+    font-size: 3.2em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
     text-shadow: 0 0 10px cyan, 0 0 20px blue;
     animation: glow 2s infinite alternate;
 }
+.hero .subtext {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-top: 10px;
+    opacity: 0.8;
+}
 .hero button {
-    padding: 12px;
+    padding: 14px 20px;
     font-size: 18px;
     border-radius: 8px;
     background: cyan;
@@ -58,48 +58,57 @@ body {
 
 /* 🔹 Explore Section */
 .explore {
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.7);
-    animation: fadeIn 2s ease-in-out;
+    padding: 60px;
+    background: rgba(0, 0, 0, 0.8);
 }
 .planet-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 .planet-card {
-    width: 250px;
-    padding: 15px;
+    width: 300px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .planet-card:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px cyan;
+    box-shadow: 0 0 25px cyan;
+}
+.planet-card h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+.planet-card .description {
+    font-size: 1.2em;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: 8px;
 }
 
 /* 🔹 Journal Section */
 .journal input, .journal button {
-    padding: 10px;
-    font-size: 16px;
-    margin: 10px;
+    padding: 12px;
+    font-size: 18px;
+    margin: 12px;
     border-radius: 8px;
     border: 2px solid white;
-    animation: fadeIn 1s ease-in-out;
 }
 .journal input:focus, .journal button:hover {
     background: rgba(255, 255, 255, 0.2);
     color: white;
 }
+.journal .subtext {
+    font-size: 1.3em;
+    font-weight: 400;
+    opacity: 0.85;
+}
 
 /* 🔹 Animations */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
 @keyframes float {
     0% { transform: translateY(0px); }
     100% { transform: translateY(-10px); }
