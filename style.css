@@ -1,75 +1,73 @@
-/* 🔹 Space API UI - Complete CSS Styling 🔹 */
+/* 🚀 Space-Themed UI Styling */
 
-/* 🌌 General Styling - Space Aesthetic */
+/* 🔹 General Page Styling */
 body {
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    background: url('https://source.unsplash.com/1600x900/?space') no-repeat center center fixed;
+    background: url('https://source.unsplash.com/1600x900/?space,stars,galaxy') no-repeat center center fixed;
     background-size: cover;
     color: white;
-    margin: 0;
-    padding: 0;
 }
 
-/* 🔹 Header Styling - Glowing Text */
-h1 {
-    margin-top: 20px;
-    font-size: 2.5em;
-    text-transform: uppercase;
+/* 🔹 Hero Section */
+.hero {
+    padding: 80px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero h1 {
+    font-size: 3em;
     animation: glow 2s infinite alternate;
 }
-
-/* 🔹 Search Bar & Button - Futuristic UI */
-input, button {
+.hero button {
     padding: 12px;
     font-size: 18px;
+    border-radius: 8px;
+    background: cyan;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero button:hover {
+    background: blue;
+}
+
+/* 🔹 Explore Section */
+.explore {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+}
+.planet-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.planet-card {
+    width: 200px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.planet-card:hover {
+    transform: scale(1.1);
+}
+
+/* 🔹 Journal Section */
+.journal input, .journal button {
+    padding: 10px;
+    font-size: 16px;
     margin: 10px;
     border-radius: 8px;
     border: 2px solid white;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    outline: none;
-    transition: 0.3s ease-in-out;
 }
-
-/* 🔹 Hover Effects */
-input:focus, button:hover {
+.journal input:focus, .journal button:hover {
     background: rgba(255, 255, 255, 0.2);
-    color: cyan;
-    cursor: pointer;
+    color: white;
 }
 
-/* 🔹 Image Styling - Shadow & Glow */
-img {
-    max-width: 80%;
-    margin-top: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* 🔹 Image Hover Effect */
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px cyan;
-}
-
-/* 🔹 Loading Text Animation */
-#result p {
-    font-size: 18px;
-    color: cyan;
-    font-weight: bold;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* 🔹 Glowing Animation for Header */
+/* 🔹 Glowing Animation */
 @keyframes glow {
     0% { text-shadow: 0 0 10px white; }
     100% { text-shadow: 0 0 20px cyan, 0 0 30px blue; }
-}
-
-/* 🔹 Fade-In Animation for Content */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
 }
