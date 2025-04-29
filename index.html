@@ -3,51 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmic Explorer</title>
-    <!-- 🚀 Space Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>Celestial Chronicles</title>
+    <!-- 🚀 Elegant Space Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <!-- 🌌 External Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 🔹 Hero Section -->
+    <!-- 🔹 Header Section -->
     <header class="hero">
-        <div class="overlay">
-            <h1>Journey Through the Cosmos</h1>
-            <p class="subtext">Explore planets, galaxies, and space phenomena in real time.</p>
-            <button onclick="scrollToExplore()">Start Exploring</button>
+        <div class="hero-content">
+            <h1>Celestial Chronicles</h1>
+            <p class="subtext">Unveiling the mysteries of the cosmos with insight and elegance.</p>
         </div>
     </header>
 
     <!-- 🔹 Explore Section -->
-    <section class="explore" id="explore">
+    <section class="explore">
         <h2>Discover the Universe</h2>
         <div class="planet-grid">
-            <div class="planet-card" onclick="fetchData('mars')">
+            <div class="planet-card">
                 <h3>Mars</h3>
                 <img src="https://source.unsplash.com/400x300/?mars" alt="Mars">
-                <p class="description">A red world of mystery and potential future exploration.</p>
+                <p class="description">A red world filled with the whispers of ancient landscapes.</p>
             </div>
-            <div class="planet-card" onclick="fetchData('jupiter')">
+            <div class="planet-card">
                 <h3>Jupiter</h3>
                 <img src="https://source.unsplash.com/400x300/?jupiter" alt="Jupiter">
-                <p class="description">A gas giant with powerful storms and mesmerizing rings.</p>
+                <p class="description">A gas giant adorned with swirling storms of timeless wonder.</p>
             </div>
-            <div class="planet-card" onclick="fetchData('andromeda')">
+            <div class="planet-card">
                 <h3>Andromeda Galaxy</h3>
                 <img src="https://source.unsplash.com/400x300/?galaxy" alt="Andromeda">
-                <p class="description">Our nearest galactic neighbor, full of cosmic secrets.</p>
+                <p class="description">A neighboring galaxy painting light across eternity.</p>
             </div>
         </div>
     </section>
 
-    <!-- 🔹 Journal Section -->
+    <!-- 🔹 Cosmic Journal -->
     <section class="journal">
-        <h2>Cosmic Insights</h2>
-        <p class="subtext">Search for space data using NASA’s API</p>
-        <input type="text" id="searchQuery" placeholder="Enter a celestial body">
-        <button onclick="fetchData()">Search</button>
+        <h2>Celestial Insights</h2>
+        <p class="subtext">Dive into the depths of cosmic wonders, powered by NASA’s archives.</p>
+        <input type="text" id="searchQuery" placeholder="Search for celestial knowledge">
+        <button onclick="fetchData()">Explore</button>
         <div id="result"></div>
     </section>
 

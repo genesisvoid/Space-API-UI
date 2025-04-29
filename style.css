@@ -1,12 +1,11 @@
-/* 🚀 Space-Themed UI with Perfected Text Formatting & Design */
+/* 🚀 Elegant Space-Themed UI */
 
 /* 🔹 General Page Styling */
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: linear-gradient(to right, #010024, #020027, #03002f); /* Deep space gradient */
+    background: linear-gradient(to right, #0c0c21, #1a1a3c); /* Deep space gradient */
     background-attachment: fixed;
-    overflow-x: hidden;
     color: white;
     margin: 0;
     padding: 0;
@@ -14,52 +13,35 @@ body {
 
 /* 🔹 Hero Section */
 .hero {
-    position: relative;
-    height: 100vh;
-    background: url('https://source.unsplash.com/1600x900/?nebula,galaxy') no-repeat center center fixed;
+    height: 90vh;
+    background: url('https://source.unsplash.com/1600x900/?galaxy,stars,nebula') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.overlay {
-    background: rgba(0, 0, 0, 0.5);
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
     padding: 50px;
     border-radius: 15px;
-    animation: float 5s infinite alternate;
 }
 .hero h1 {
-    font-size: 3.2em;
+    font-size: 3.5em;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    text-shadow: 0 0 10px cyan, 0 0 20px blue;
-    animation: glow 2s infinite alternate;
+    text-shadow: 0 0 8px cyan;
 }
 .hero .subtext {
     font-size: 1.4em;
     font-weight: 400;
-    margin-top: 10px;
     opacity: 0.8;
-}
-.hero button {
-    padding: 14px 20px;
-    font-size: 18px;
-    border-radius: 8px;
-    background: cyan;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    animation: pulse 2s infinite alternate;
-}
-.hero button:hover {
-    background: blue;
-    transform: scale(1.05);
+    font-family: 'Roboto', sans-serif;
 }
 
 /* 🔹 Explore Section */
 .explore {
     padding: 60px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.05);
 }
 .planet-grid {
     display: flex;
@@ -71,26 +53,30 @@ body {
     width: 300px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .planet-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px cyan;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
 }
 .planet-card h3 {
     font-size: 1.8em;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
 .planet-card .description {
     font-size: 1.2em;
-    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
     opacity: 0.9;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
-/* 🔹 Journal Section */
+/* 🔹 Cosmic Journal */
+.journal {
+    padding: 50px;
+}
 .journal input, .journal button {
     padding: 12px;
     font-size: 18px;
@@ -104,20 +90,6 @@ body {
 }
 .journal .subtext {
     font-size: 1.3em;
-    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
     opacity: 0.85;
-}
-
-/* 🔹 Animations */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-10px); }
-}
-@keyframes glow {
-    0% { text-shadow: 0 0 10px white; }
-    100% { text-shadow: 0 0 20px cyan, 0 0 30px blue; }
-}
-@keyframes pulse {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.05); }
 }
