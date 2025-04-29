@@ -1,4 +1,4 @@
-/* 🚀 Elegant Space-Themed UI */
+/* 🚀 Elegant Space-Themed UI with Embedded Typography */
 
 /* 🔹 General Page Styling */
 body {
@@ -21,7 +21,6 @@ body {
     align-items: center;
 }
 .hero-content {
-    background: rgba(0, 0, 0, 0.5);
     padding: 50px;
     border-radius: 15px;
 }
@@ -29,19 +28,20 @@ body {
     font-size: 3.5em;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    text-shadow: 0 0 8px cyan;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 .hero .subtext {
     font-size: 1.4em;
     font-weight: 400;
-    opacity: 0.8;
+    opacity: 0.9;
     font-family: 'Roboto', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* 🔹 Explore Section */
 .explore {
     padding: 60px;
-    background: rgba(255, 255, 255, 0.05);
+    background: transparent; /* Removed any box lining */
 }
 .planet-grid {
     display: flex;
@@ -52,25 +52,27 @@ body {
 .planet-card {
     width: 300px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent; /* No box outline */
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .planet-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px cyan;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 .planet-card h3 {
     font-size: 1.8em;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 .planet-card .description {
     font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
     opacity: 0.9;
     margin-top: 10px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* 🔹 Cosmic Journal */
@@ -92,4 +94,5 @@ body {
     font-size: 1.3em;
     font-family: 'Roboto', sans-serif;
     opacity: 0.85;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
