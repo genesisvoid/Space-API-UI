@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space API Hub</title>
+    <title>Celestial API Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Celestial Chronicles</div>
+            <ul class="nav-links">
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#journal">Cosmic Journal</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="sign-up">Sign Up</button></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
+        <div id="background-container"></div> <!-- Dynamic background will be applied here -->
         <div class="hexagon">
             <div class="glow"></div>
         </div>
-        <div class="cards">
+        <div class="cards-container">
             <div class="card">
                 <h3>Asteroid Tracking</h3>
                 <p>Monitor asteroid movements with precision.</p>
             </div>
             <div class="card">
-                <h3>Exoplanet Data</h3>
-                <p>Explore worlds beyond our solar system.</p>
+                <h3>Exoplanet Exploration</h3>
+                <p>Discover worlds beyond our solar system.</p>
             </div>
             <div class="card">
-                <h3>Space Weather</h3>
-                <p>Stay updated on cosmic weather patterns.</p>
+                <h3>Space Weather Updates</h3>
+                <p>Stay informed on cosmic conditions.</p>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Celestial Chronicles. All rights reserved.</p>
+    </footer>
 </body>
 </html>

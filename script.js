@@ -1,38 +1,25 @@
-// Three.js Starfield
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('starfield').appendChild(renderer.domElement);
+// NASA API Key
+const NASA_API_KEY = 'vFfRYVJJTPDKd5vi5xEru2vvndoZ90zej17bI6jx';
+const NASA_APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${vFfRYVJJTPDKd5vi5xEru2vvndoZ90zej17bI6jx}`;
+const backgroundContainer = document.getElementById('background-container');
 
-const starGeometry = new THREE.BufferGeometry();
-const starVertices = [];
-for (let i = 0; i < 1000; i++) {
-    starVertices.push(
-        (Math.random() - 0.5) * 2000,
-        (Math.random() - 0.5) * 2000,
-        (Math.random() - 0.5) * 2000
-    );
-}
-starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
-const starMaterial = new THREE.PointsMaterial({ color: 0xffffff });
-const stars = new THREE.Points(starGeometry, starMaterial);
-scene.add(stars);
+// Function to fetch and update background image
+async function updateBackground() {
+    try {
+        const response = await fetch(NASA_APOD_URL);
+        const data = await response.json();
 
-camera.position.z = 500;
-
-function animate() {
-    requestAnimationFrame(animate);
-    stars.rotation.x += 0.0005;
-    stars.rotation.y += 0.0005;
-    renderer.render(scene, camera);
+        // Check if image exists and is valid
+        if (data.media_type === 'image') {
+            backgroundContainer.style.backgroundImage = `url(${data.url})`;
+        } else {
+            console.error('NASA APOD returned non-image media type');
+        }
+    } catch (error) {
+        console.error('Error fetching NASA APOD data:', error);
+    }
 }
 
-animate();
-
-// Handle window resizing
-window.addEventListener('resize', () => {
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-});
+// Change background every 30 seconds
+setInterval(updateBackground, 30000);
+updateBackground(); // Initial call to set the background
