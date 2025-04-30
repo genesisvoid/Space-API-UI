@@ -3,13 +3,13 @@ const NASA_API_KEY = 'vFfRYVJJTPDKd5vi5xEru2vvndoZ90zej17bI6jx';
 const NASA_APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${vFfRYVJJTPDKd5vi5xEru2vvndoZ90zej17bI6jx}`;
 const backgroundContainer = document.getElementById('background-container');
 
-// Function to fetch and update background image
-async function updateBackground() {
+// Function to fetch and apply background image
+async function applyBackground() {
     try {
         const response = await fetch(NASA_APOD_URL);
         const data = await response.json();
 
-        // Check if image exists and is valid
+        // Ensure the media type is an image
         if (data.media_type === 'image') {
             backgroundContainer.style.backgroundImage = `url(${data.url})`;
         } else {
@@ -20,6 +20,5 @@ async function updateBackground() {
     }
 }
 
-// Change background every 30 seconds
-setInterval(updateBackground, 30000);
-updateBackground(); // Initial call to set the background
+// Fetch the initial background image
+applyBackground();
