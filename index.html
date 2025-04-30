@@ -4,55 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celestial Chronicles</title>
-    <!-- 🚀 Elegant Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- 🌌 External Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <!-- 🚀 Three.js Library for 3D Space Background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-
-    <!-- 🔹 Hero Section with Embedded 3D Background -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Celestial Chronicles</h1>
-            <p class="subtext">Unveiling the mysteries of the cosmos with insight and elegance.</p>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Celestial Chronicles</div>
+            <ul class="nav-links">
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#journal">Cosmic Journal</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- 🔹 Explore Section -->
-    <section class="explore">
-        <h2>Discover the Universe</h2>
-        <div class="planet-grid">
-            <div class="planet-card">
-                <h3>Mars</h3>
-                <img src="https://source.unsplash.com/400x300/?mars" alt="Mars">
-                <p class="description">A red world, whispering stories of ancient landscapes and future exploration.</p>
-            </div>
-            <div class="planet-card">
-                <h3>Jupiter</h3>
-                <img src="https://source.unsplash.com/400x300/?jupiter" alt="Jupiter">
-                <p class="description">The majestic gas giant, home to swirling storms and mesmerizing auroras.</p>
-            </div>
-            <div class="planet-card">
-                <h3>Andromeda Galaxy</h3>
-                <img src="https://source.unsplash.com/400x300/?galaxy" alt="Andromeda">
-                <p class="description">Our neighboring galaxy, revealing cosmic wonders beyond imagination.</p>
-            </div>
+    <section class="hero">
+        <div id="starfield"></div>
+        <div class="hero-content">
+            <h1>Explore the Cosmos</h1>
+            <p>Where Science Meets Elegance</p>
         </div>
     </section>
 
-    <!-- 🔹 Cosmic Journal -->
-    <section class="journal">
-        <h2>Celestial Insights</h2>
-        <p class="subtext">Dive into the depths of cosmic wonders, powered by NASA’s archives.</p>
-        <input type="text" id="searchQuery" placeholder="Search for celestial knowledge">
-        <button onclick="fetchData()">Explore</button>
-        <div id="result"></div>
+    <section id="modules" class="explore">
+        <h2>Discover Modules</h2>
+        <div class="card-grid">
+            <div class="card">Asteroids Tracking</div>
+            <div class="card">Exoplanets Exploration</div>
+            <div class="card">Space Weather Alerts</div>
+        </div>
     </section>
 
-    <!-- 🚀 External JavaScript -->
+    <footer id="contact" class="footer">
+        <p>© 2025 Celestial Chronicles. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
