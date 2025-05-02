@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celestial API Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AnimeZone - Watch Anime Free</title>
+
+  <!-- External Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Celestial Chronicles</div>
-            <ul class="nav-links">
-                <li><a href="#modules">Modules</a></li>
-                <li><a href="#journal">Cosmic Journal</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button class="sign-up">Sign Up</button></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">AnimeZone</div>
+    <ul class="nav-links">
+      <li class="nav-link-item active">Home</li>
+      <li class="nav-link-item">Anime List</li>
+      <li class="nav-link-item">Genres</li>
+      <li class="nav-link-item">Popular</li>
+      <li class="nav-link-item">Contact</li>
+    </ul>
+    <div class="toggle">
+      <div class="toggle-ball"></div>
+    </div>
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div id="background-container"></div> <!-- Dynamic background will be applied here -->
-        <div class="hero-content">
-            <h1>Explore the Cosmos</h1>
-            <p>Discover celestial wonders dynamically.</p>
-        </div>
-    </section>
+  <!-- Featured Section -->
+  <header class="featured" style="background-image: url('img/featured-banner.jpg');">
+    <div class="overlay">
+      <h1>One Piece</h1>
+      <p>Join Luffy and his crew as they search for the ultimate treasure: the One Piece!</p>
+      <button>Watch Now</button>
+    </div>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Celestial Chronicles. All rights reserved.</p>
-    </footer>
+  <!-- Anime Sections -->
+  <main class="anime-section">
+    <!-- New Releases -->
+    <h2>New Releases (2020–2025)</h2>
+    <div class="anime-list">
+      <div class="anime-card">
+        <img src="img/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen">
+        <h3>Jujutsu Kaisen</h3>
+        <button>Watch</button>
+      </div>
+      <div class="anime-card">
+        <img src="img/solo-leveling.jpg" alt="Solo Leveling">
+        <h3>Solo Leveling</h3>
+        <button>Watch</button>
+      </div>
+      <div class="anime-card">
+        <img src="img/chainsaw-man.jpg" alt="Chainsaw Man">
+        <h3>Chainsaw Man</h3>
+        <button>Watch</button>
+      </div>
+      <div class="anime-card">
+        <img src="img/frieren.jpg" alt="Frieren: Beyond Journey's End">
+        <h3>Frieren: Beyond Journey's End</h3>
+        <button>Watch</button>
+      </div>
+      <div class="anime-card">
+        <img src="img/oshi-no-ko.jpg" alt="Oshi no Ko">
+        <h3>Oshi no Ko</h3>
+        <button>Watch</button>
+      </div>    
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AnimeZone. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
